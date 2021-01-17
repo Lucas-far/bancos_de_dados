@@ -1,10 +1,11 @@
 
 
 """
-Objetivo:
-         utilizar bdd postgresql para poder usar em projetos Django no OS Ubuntu
+Módulo: instalar_postgresql_ubuntu.py
 
-Palavra chave >>> instalar postgresql
+Objetivo: utilizar bdd postgresql para poder usar em projetos Django no OS Ubuntu
+
+Palavra chave: postgresql instalar ubuntu
 """
 
 def fonte():
@@ -14,15 +15,17 @@ def fonte():
     Aula  # 75. Instalação e Configuração no Linux
     """
 
-def terminal():
+# Comandos utilitários antes da instalação
+def parte1():
     """
     sudo apt update && sudo apt -y upgrade && sudo apt list --upgradable
     sudo reboot
     """
 
-# https://www.postgresql.org/download/linux/ubuntu/
-def instalar_parte1():
+# Download e procedimentos iniciais de instalação do PostgreSQL
+def parte2():
     """
+    1 - Download -> https://www.postgresql.org/download/linux/ubuntu/
     1 - sudo sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)-pgdg main" > /etc/apt/sources.list.d/pgdg.list'
     2 - wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
     3 - sudo apt-get update
@@ -32,7 +35,8 @@ def instalar_parte1():
         4.1 - pg_ctlcluster 13 main start
     """
 
-def comandos_condicionais():
+# Comandos em caso haja problemas em relação a parte 2
+def parte3():
     """
     Se após os 3 comandos anteriores, haver um erro de arquitetura [ i386 ], então fazer os códigos
 
@@ -41,13 +45,14 @@ def comandos_condicionais():
     Usar [ sudo dpkg --remove-architecture i386 ]
     """
 
-def instalar_parte2():
+# Download da interface gráfica do PostgreSQL
+def parte4():
     """
-    sudo apt-get -y install postgresql-12 (já há a versão 13)
-    sudo apt-get -y install pgadmin4
+    1 - sudo apt-get -y install pgadmin4
     """
 
-def terminal2():
+# Comandos básicos relacionados os PostgreSQL
+def parte5():
     """
     sudo su - postgres  # logar no postgresql com a conta padrão admin [ postgres ]
     psql                # usar o console psql em uma conta já logado [ no contexto: postgres ]
@@ -57,18 +62,18 @@ def terminal2():
     """
 
 # Configurar uma senha para o usuário padrão [ postgres ]
-def terminal3():
+"OBS"  # O segundo item 2 deve ter um retorno: ALTER ROLE
+def parte6():
     """
     1 - sudo su - postgres
     2 - psql
-    2. ALTER user postgres WITH PASSWORD 'senha desejada';
-    3. \q
-    4. exit
+    2 - ALTER user postgres WITH PASSWORD 'senha desejada';
+    3 - \q
+    4 - exit
     """
-    # 2. retorno = ALTER ROLE
 
 # Configurar um novo usuário, apartir do padrão [ postgres ]
-def terminal4():
+def parte7():
     """
     1 - sudo su - postgres
     2 - psql
@@ -78,58 +83,29 @@ def terminal4():
     6 - exit
     """
 
-# Tutorial: como usar PgAdmin4
-def pgadmin4():
-    """
-    1. PgAdmin4 é um software gerenciador para bdds do postgresql
-
-    2. TERMINAL:
-                sudo apt-get -y install pgadmin4
-
-    3. CRIAR UM SERVIDOR PARA CADA CONTA NOVA
-       Servers
-           botão direito
-               create
-                   server
-                       general
-                           name = dê um nome ao servidor
-                               connection
-                                   host = localhost
-                                       username = nome do usuário novo criado
-                                           password = senha do usuário novo criado
-
-    4. APÓS CRIAR UM SERVIDOR, ESTE PODE TER VÁRIOS BDDS, UM PARA CADA PROJETO
-       Servidor (abaixo dele, há a opção: databases)
-           databases
-               botão direito
-                   create
-                       database
-                           database = dê um nome ao bdd
-                               save
-    """
-
-# Deletar usuário não postgres
-def tutorial():
+# Deletar usuário não postgres (usuário não padrão)
+def parte8():
     """
     1 - sudo su - postgres
     2 - dropuser nome_do_usuário
-    :return:
     """
 
 # Deletar postgresql
-def tutorial2():
+def parte9():
     """
     1 - sudo apt-get --purge remove postgresql
     2 - dpkg -l | grep postgres
     3 - sudo apt-get --purge remove
 
-    pgdg-keyring
-    postgresql-12
-    postgresql-13
-    postgresql-client-12
-    postgresql-client-13
-    postgresql-client-common
-    postgresql-common
+        pgdg-keyring
+        postgresql-12
+        postgresql-13
+        postgresql-client-12
+        postgresql-client-13
+        postgresql-client-common
+        postgresql-common
 
-    4 - sudo apt-get --purge remove postgresql-12 postgresql-13 postgresql-client-12 postgresql-client-13 postgresql-client-common postgresql-common
+    4 - EXEMPLO de como remover dependências em linha (baseado nos resultados acima)
+
+        sudo apt-get --purge remove postgresql-12 postgresql-13 postgresql-client-12 postgresql-client-13 postgresql-client-common postgresql-common
     """

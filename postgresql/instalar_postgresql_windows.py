@@ -1,8 +1,11 @@
 
 
 """
-Objetivo:
-         configurar bdd postgresql para poder usar em projetos Django no OS Windows
+Módulo: instalar_postgresql_windows.py
+
+Objetivo: configurar bdd postgresql para poder usar em projetos Django no OS Windows
+
+Palavra chave: postgresql instalar windows
 """
 
 def fonte():
@@ -12,25 +15,24 @@ def fonte():
     Aula  # 74. Instalação e Configuração no Windows
     """
 
-def software():
+# Onde achar e fazer download (64 bits)
+def parte1():
     """
-    Baixar e instalar software PostgreSQL x64 para OS Windows
-        https://www.postgresql.org/download/windows/
+    1 - https://www.postgresql.org/download/windows/
     """
 
 # Ferramentas no instalador, a serem baixadas
-def instalar_mysql():
+def parte2():
     """
-    1. PostgreSQL server
-    2. Pgadmin4
-    3. Stack Builder
-    4. Command line tools
-    5. Também será requisitado a configuração de uma senha para o usuário admin padrão [ postgres ]
+    1 - PostgreSQL server
+    2 - Pgadmin4
+    3 - Stack Builder
+    4 - Command line tools
+    5 - Também será requisitado a configuração de uma senha para o usuário admin padrão [ postgres ]
     """
-    # 3. Software que disponibiliza mais ferramentas para PostgreSQL
 
-# Configuração do software - PARTE 1
-def registrar_postgresql_bin():
+# Configuração dos binários
+def parte3():
     """
     1. Ir à rota padrão de instalação do postgresql no Windows, na pasta bin
        ROTA (copiar) (ctrl + c):
@@ -51,7 +53,8 @@ def registrar_postgresql_bin():
                                      c:\Program Files\PostgreSQL\12\bin
     """
 
-def terminal():
+# Testar se o PostgreSQL foi configurado com sucesso
+def parte4():
     """
     1. psql -U postgres
     2. Inserir senha do usuário admin [ postgres ]
@@ -62,20 +65,21 @@ def terminal():
                 5. Pgadmin4 é instalado durante a instalação do software postgresql
     """
 
-# Configuração do software - PARTE 2
-def pgadmin4_parte1():
+# Configuração da interface gráfica do PostgreSQL
+"OBS"  # Software instalado durante a instalação do PostgreSQL (parte 2)
+def parte5():
     """
     1. Abrir o software [ Pgadmin4 ]
     2. Na abertura, sempre será requisitado a senha da sua conta Windows
 
     3. Ao fornecer a senha criada:
        Servers
-           PostgreSQL12
-               digitar senha = usuário [ postgres ] da instalação
+           PostgreSQL (nome padrão inicial do primeiro servidor)
+               digitar senha do usuário [ postgres ] criado na instalação
     """
 
 # Criação do usuário novo, apartir do padrão [ postgres ]
-def pgadmin4_parte2():
+def parte6():
     """
     1. Após as duas requisições, torna-se disponível:
        Login/Group Roles

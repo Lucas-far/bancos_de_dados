@@ -1,12 +1,11 @@
 
 
 """
-Objetivo:
-         instalar MySQL para poder usar em projetos Django
+Módulo: instalar_mysql_ubuntu.py
 
-Contas atuais:
-              lu***dm**  / *as****t2*7*
-              lu***dm**2 / *as****t2*7*
+Objetivo: instalar MySQL para poder usar em projetos Django no OS Ubuntu.
+
+Palavra chave: mysql instalar ubuntu
 """
 
 def fonte():
@@ -17,20 +16,20 @@ def fonte():
     """
 
 # Comandos de atualização no OS Ubuntu
-def terminal():
+def parte1():
     """
     sudo apt update && sudo apt -y upgrade && sudo apt list --upgradable
     sudo reboot
     """
 
 # Comando para instalar o servidor MySQL
-def terminal2():
+def parte2():
     """
     sudo apt install mysql-server
     """
 
 # Comandos pós instalação do MySQL
-def terminal3():
+def parte3():
     """
     1 - sudo mysql                    #  Logar no console MySQL
     2 - help                          #  Lista de comandos do console MySQL
@@ -46,7 +45,7 @@ def terminal3():
     # 4 adiante, são indepentes
 
 # Configurar um servidor MySQL
-def terminal4():
+def parte4():
     """
     1 - sudo mysql_secure_installation
 
@@ -62,23 +61,23 @@ def terminal4():
     """
 
 # Criação do usuário novo apartir do usuário admin padrão
-def terminal5():
+def parte5():
     """
-    1. sudo mysql
-    2. SHOW VARIABLES LIKE 'validate_password%';
-    3. SET GLOBAL validate_password.policy=LOW;
-    2. CREATE USER 'nome do usuário'@'localhost' IDENTIFIED BY 'senha desejada';
-    3. GRANT ALL PRIVILEGES ON *.* TO 'usuário criado'@'localhost' WITH GRANT OPTION;
-    4. FLUSH PRIVILEGES;
-    5. exit
-    6. sudo mysql -unome do usuário novo -p
-    7. digitar a senha do OS
-    8. digitar a senha do usuário novo
+    1 - sudo mysql
+    2 - SHOW VARIABLES LIKE 'validate_password%';
+    3 - SET GLOBAL validate_password.policy=LOW;
+    4 - CREATE USER 'nome do usuário'@'localhost' IDENTIFIED BY 'senha desejada';
+    5 - GRANT ALL PRIVILEGES ON *.* TO 'usuário criado'@'localhost' WITH GRANT OPTION;
+    6 - FLUSH PRIVILEGES;
+    7 - exit
+    8 - sudo mysql -unome do usuário novo -p
+    9 - digitar a senha do OS
+    10 - digitar a senha do usuário novo
     """
     # 3 - altera uma das linhas da tabela responsável pela segurança da senha para: LOW
 
 # Comandos pós login de uma conta
-def terminal6():
+def parte6():
     """
     SHOW DATABASES;                  # Mostrar todos os bdds
     USE nome do bdd;                 # Acessar um bdd específico (se você está em outro bdd, ele será deslogado)
@@ -87,14 +86,20 @@ def terminal6():
     SELECT * FROM sys_config;        # Exemplo do comando acima
     """
 
-# todo...Importante (Instalação da ferramenta MySQL Workbench)
+"Instalação do MySQL Workbench"
 
-def download_mysql_workbench():
+# Download e instalação
+def parte7():
     """
-    Google:
-           MySQL Workbench - MySQL
-    Link direto:
-                https://www.mysql.com/products/workbench/
-    Observação:
-               é um instalador normal, como acontece no Windows, sem necessidade de configurações avançadas
+    Google: MySQL Workbench - MySQL
+    Link direto: https://www.mysql.com/products/workbench/
+
+    1 - MySQL é um instalador normal no Ubuntu, como acontece no Windows
+    """
+
+# Acesso
+def parte8():
+    """
+    1 - Abrir o MySQL Workbench
+    2 - Na abertura, deve haver a conta padrão e a conta do usuário novo criado neste tutorial
     """

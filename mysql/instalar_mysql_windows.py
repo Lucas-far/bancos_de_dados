@@ -1,12 +1,11 @@
 
 
 """
-Objetivo:
-         instalar MySQL para poder usar em projetos Django
+Módulo: instalar_mysql_windows.py
 
-Contas atuais:
-              lu***dm**  / *as****t2*7*
-              lu***dm**2 / *as****t2*7*
+Objetivo: instalar MySQL para poder usar em projetos Django no OS Windows.
+
+Palavra chave: mysql instalar windows
 """
 
 def fonte():
@@ -16,15 +15,15 @@ def fonte():
     Aula  # 44. Instalação e Configuração no Windows
     """
 
-def browser():
+# Onde achar
+def parte1():
     """
-    Google:
-           download mysql windows 64 bit
-    Link direto:
-                https://dev.mysql.com/downloads/mysql/ (escolher Windows)
+    Google: download mysql windows 64 bit
+    Link direto: https://dev.mysql.com/downloads/mysql/ (escolher Windows)
     """
 
-def instalar_mysql():
+# Procedimentos durante a instalação
+def parte2():
     """
     1 - Na instalação, escolher instalação [ Custom ]
     2 - Na instalação customizada, baixar as seguintes ferramentas:
@@ -39,7 +38,7 @@ def instalar_mysql():
     """
 
 # Registrar o diretório bin do MySQL
-def windows():
+def parte3():
     """
     1 - Ir à rota padrão de instalação do mysql no Windows, na pasta de binários
         ROTA:
@@ -60,10 +59,10 @@ def windows():
     """
 
 # Primeiro acesso pós instalação
-def terminal():
+def parte4():
     """
     1 - mysql -u root -p
-    2 - mysql -uroot -p (se a primeira falhar)
+    2 - mysql -uroot -p (se 1 falhar)
 
     3 - Se o mysql estiver devidamente configurado, será apresentado o MySQL Monitor
     4 - [ help ] para ter acesso a comandos de ajuda no MySQL Monitor
@@ -73,7 +72,7 @@ def terminal():
 "É preciso criar um usuário aparte do padrão, mas ela será criado através do padrão"
 
 # Criação do usuário novo apartir do usuário admin padrão
-def terminal2():
+def parte5():
     """
     1 - mysql -u root -p
     2 - mysql -uroot -p (se a primeira falhar)
@@ -90,7 +89,7 @@ def terminal2():
     """
 
 # Comandos pós login de uma conta
-def terminal3():
+def parte6():
     """
     SHOW DATABASES;                # Mostrar uma lista de todos os bdds disponíveis
     USE nome do bdd;               # Logar em um dos bdds disponíveis

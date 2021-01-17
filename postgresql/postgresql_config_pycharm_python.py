@@ -3,10 +3,9 @@
 """
 Módulo: postgresql_config_pycharm_python.py
 
-Objetivo:
-         configurar bdd postgreSQL dentro de um projeto Django
+Objetivo: configurar bdd postgreSQL dentro de um projeto Django
 
-Palavra chave >>> configurar postgresql
+Palavra chave: postgresql no projeto
 """
 
 "Título"  # Criação de um usuário novo
@@ -39,6 +38,7 @@ def pgadmin_():
     2 - Salvar
     """
 
+# Dependência necessária para usar PostgreSQL em um projeto Django
 def terminal2():
     """
     1. pip install psycopg2-binary
@@ -51,9 +51,9 @@ def settings():
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.postgresql',
-            'NAME': 'dernutzer1',
-            'USER': 'dernutzer1',
-            'PASSWORD': 'wirs....bl....n',
+            'NAME': '',
+            'USER': '',
+            'PASSWORD': '',
             'HOST': 'localhost',
             'PORT': '5432',
         }
@@ -62,19 +62,19 @@ def settings():
 
 def deploy_heroku():
     """
-    1. pip install dj-database-url
-    2. pip freeze > requirements.txt
-    3. import dj_database_url
-    4. Comentar DATABASES
-    5. DATABASES = {'default': dj_database_url.config()}
-    6. git init
-    7. git status
-    8. git add .
-    9. git commit -m "deploy_initial_config" (repetir, caso demore demais...)
-    10. git status
-    11. heroku login
-    12. heroku create av.sufixo desejado --buildpack heroku/python
-    13. git push heroku master
-    14. heroku run python manage.py migrate
-    15. heroku run python manage.py createsuperuser
+    1  - pip install dj-database-url
+    2  - pip freeze > requirements.txt
+    3  - import dj_database_url
+    4  - Comentar DATABASES
+    5  - DATABASES = {'default': dj_database_url.config()}
+    6  - git init
+    7  - git status
+    8  - git add .
+    9  - git commit -m "deploy_initial_config" (repetir, caso demore demais...)
+    10 - git status
+    11 - heroku login
+    12 - heroku create av.sufixo desejado --buildpack heroku/python
+    13 - git push heroku master
+    14 - heroku run python manage.py migrate
+    15 - heroku run python manage.py createsuperuser
     """

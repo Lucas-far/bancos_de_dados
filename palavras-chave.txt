@@ -1,9 +1,0 @@
-aulas
-mysql instalar ubuntu
-mysql instalar windows
-mysql no projeto
-postgresql instalar ubuntu
-postgresql instalar windows
-postgresql no projeto
-redis sobre
-redis ubuntu

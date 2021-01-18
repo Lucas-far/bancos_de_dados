@@ -123,3 +123,4 @@ def aula_12():
         (2_44, 3_11): 'Objetivo importante da normalização de dados',
         (3_11, 4_27): 'Conclusão',
     }
+

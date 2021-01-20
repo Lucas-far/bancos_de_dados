@@ -2,9 +2,7 @@
 
 """
 Módulo: instalar_mysql_ubuntu.py
-
 Objetivo: instalar MySQL para poder usar em projetos Django no OS Ubuntu.
-
 Palavra chave: mysql instalar ubuntu
 """
 

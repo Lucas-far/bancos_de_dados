@@ -2,10 +2,8 @@
 
 """
 Módulo: instalar_mysql_windows.py
-
 Objetivo: instalar MySQL para poder usar em projetos Django no OS Windows.
-
-Palavra chave: mysql instalar windows
+Palavra chave: mysql windows
 """
 
 def fonte():

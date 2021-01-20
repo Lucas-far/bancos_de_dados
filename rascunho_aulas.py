@@ -1,11 +1,8 @@
 
 
 """
-Módulo: aulas_do_curso.py
-
-Objetivo:
-         descrever fatos relevantes nas aulas, em minha opinião
-
+Módulo: rascunho_aulas.py
+Objetivo: descrever fatos relevantes nas aulas, em minha opinião
 Palavra chave: aulas
 """
 

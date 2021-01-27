@@ -2,9 +2,7 @@
 
 """
 Módulo: postgresql_config_pycharm_python.py
-
 Objetivo: configurar bdd postgreSQL dentro de um projeto Django
-
 Palavra chave: postgresql no projeto
 """
 
@@ -27,15 +25,19 @@ def terminal():
 def pgadmin():
     """
     1 - Abrir o Pgadmin4
-    2 - Servers - botão direito - create - server - preencher o nome - preencher o username - preencher o password
-    3 - Salvar
+    2 - Servers -> botão direito -> new -> server
+    3 - Uma janela nova abrirá
+    4 - Aba [ general ] name=qualquer nome / nome do user criado acima
+    5 - Aba [ connection ] host=localhost / username=nome do user criado acima / password= senha do user criado acima
     """
 
 "Título"  # Criação de um bdd
 def pgadmin_():
     """
-    1 - Databases - botão direito - create - database - preencher nome
-    2 - Salvar
+    Botão direito no servidor criado (ícone elefante) -> create -> database
+    Aba [ general ] name=qualquer nome
+    Salvar
+    Clicar no nome, para ativá-lo
     """
 
 # Dependência necessária para usar PostgreSQL em um projeto Django

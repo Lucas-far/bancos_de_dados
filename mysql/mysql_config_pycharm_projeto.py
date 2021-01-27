@@ -2,9 +2,7 @@
 
 """
 Módulo: mysql_config_pycharm_projeto.py
-
 Objetivo: configurar um projeto para receber um bdd mysql
-
 Palavra chave: mysql no projeto
 """
 

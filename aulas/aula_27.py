@@ -8,33 +8,54 @@ Local || Seção 4: Linguagem SQL - Parte 1
 Aula  || 27. DQL - Data Query Language
 """
 
-"Comando"   # SELECT
-"Objetivo"  # Consultar dados
+"------------------------------------------------------- SELECT -------------------------------------------------------"
+"Grupo sintático"  # SELECT FROM AS
+"SELECT"           # campo
+"FROM"             # tabela
+"AS"               # campo / tabela (apelidos)
 
-def exemplo_1():
+
+def exemplo():
     """
+    =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
     TABELA = tipos_produto
-    --------------------
+    =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
     codigo || descricao
-    1      /  computador
-    2      /  impressora
-    --------------------
+    --------------------------------------------------------------------------------------------------------------------
+    1      || computador
+    ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+    2      || impressora
+    ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 
+    EXEMPLO 1
+    SELECT tudo FROM tabela    ;
     SELECT * FROM tipos_produto;
+
+    EXEMPLO 2
+    SELECt campo  FROM tabela       ;
     SELECT código FROM tipos_produto;
+
+    EXEMPLO 3
+    SELECT campo , campo2    FROM tabela       ;
     SELECT codigo, descricao FROM tipos_produto;
     """
 
-# Exemplo (alias = apelido)
-"OBS"  # não foi explicado se apelidos podem ser passado aos campos independente da tabela ter sido apelidade ou não
+
 def exemplo_2():
     """
-    TABELA = tipos_produto
-    --------------------
-    codigo || descricao
-    1      /  computador
-    2      /  impressora
-    --------------------
+    =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+    TABELA = produtos
+    =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+    codigo || descricao || preco || tipo_codigo
+    --------------------------------------------------------------------------------------------------------------------
+    1      || arroz     || 12,40 || a1
+    ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+    2      || feijão    || 9,90  || b1
+    ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+    3      || batata    || 6,20  || c1
+    ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 
-    SELECT tp.codigo AS cd, descricao AS dsc FROM tipos_produto AS tp;
+    EXEMPLO 1 -> pr = apelido da tabela
+    SELECT pr.campo  AS cd, pr.campo2    AS dsc, pr.campo3      AS tc FROM tabela   AS pr;
+    SELECT pr.codigo AS cd, pr.descricao AS dsc, pr.tipo_codigo AS tc FROM produtos AS pr;
     """

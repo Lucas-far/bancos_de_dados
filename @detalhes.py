@@ -14,6 +14,7 @@ def aulas_13_para_16():
     4 - 3FN -> Em uma tabela, nenhum CAMPO NÃO CHAVE pode depender de outro(s) CAMPO NÃO CHAVE
     """
 
+
 # 21. Exemplo passo a passo Modelagem de Dados
 def aula_21():
     """
@@ -49,4 +50,16 @@ def aula_21():
     - uma pessoa precisa de uma [ bairro ], para ter um identificador local do cidade onde esta localiza-se
     - uma pessoa precisa de uma [ rua ], para ter um identificador local do bairro onde esta localiza-se
     - uma pessoa precisa de um [ numero_casa ], para ter um identificador local na rua onde esta localiza-se
+    """
+
+
+def aula_26():
+    """
+    SQL é dividido em subgrupos: DCL DDL DML DQL DTL
+
+    - DCL = Control      (aula 30)
+    - DDL = Definititon  (aula 29)
+    - DML = Manipulation (aula 28) INSERT INTO VALUES / UPDATE WHERE / DELETE FROM
+    - DQL = Query        (aula 27) SELECT FROM / SELECT FROM AS
+    - DTL = Transaction  (aula 31)
     """

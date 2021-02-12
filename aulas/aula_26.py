@@ -11,10 +11,10 @@ Aula  || 26. Introdução à Linguagem SQL
 "SQL"                   # structured query language
 "OBS"                   # SQL é uma linguagem de banco de dados relacioinais
 "Subgrupos"             # DCL DDL DML DQL DTL
-"DCL"                   # () Data Control Language
-"DDL"                   # () Data Definititon Language
+"DCL"                   # (4) Data Control Language
+"DDL"                   # (3) Data Definititon Language
 "DML"                   # (2) Data Manipulation Language
 "DQL"                   # (1) Data Query Language
-"DTL"                   # () Data Transaction Language
+"DTL"                   # (5) Data Transaction Language
 "Comandos"              # Cada subgrupo possui comandos únicos
 "Sintaxe dos comandos"  # Convenção de escrita em cacha alta
